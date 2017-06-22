@@ -1,0 +1,13 @@
+name: hvtutorial
+channels:
+  - holoviews
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - notebook
+  - holoviews
+  - geoviews
+  - pandas
+  - xarray
+  - datashader
