@@ -1,6 +1,6 @@
 name: hvtutorial
 channels:
-  - holoviews
+  - ioam
   - conda-forge
   - defaults
 dependencies:
