@@ -3,6 +3,14 @@ scipy-2017-holoviews-tutorial
 
 HoloViews tutorial at SciPy 2017
 
+This repository contains instructions to get set up for the tutorial,
+we will have all the materials in place by July 3rd, but reserve the
+option to push critical fixes until the Friday before the tutorial,
+so please ensure you pull before leaving for SciPy.
+
+Begin by making a clone of this repository available and set up your
+environment and download the data as described below.
+
 Create a conda environment from ``environment.yml``
 -----------------------------------------------------
 
@@ -64,7 +72,7 @@ you can get a hold of them using this command inside your conda
 environment::
 
     (hvtutorial)> holoviews --install-examples
-	(hvtutorial)> cd holoviews-examples
+    (hvtutorial)> cd holoviews-examples
 
 This will create a holoviews-examples folder in your current directory.
 Now launch a Jupyter notebook server and dive into the examples::
