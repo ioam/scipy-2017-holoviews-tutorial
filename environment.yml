@@ -1,6 +1,7 @@
 name: hvtutorial
 channels:
   - ioam
+  - bokeh
   - conda-forge
   - defaults
 dependencies:
