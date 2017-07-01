@@ -16,8 +16,7 @@ Create a conda environment from ``environment.yml``
 
 The easiest way to get an environment set up for the tutorial is
 installing it from the ``environment.yml`` we have provided. If you
-don't already have it install `conda <
-https://www.continuum.io/downloads>`_ and create the ``hvtutorial``
+don't already have it install `conda <https://www.continuum.io/downloads>`_ and create the ``hvtutorial``
 environment by executing::
 
    > conda env create -f environment.yml
