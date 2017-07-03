@@ -7,7 +7,7 @@ from bokeh.layouts import layout
 from bokeh.io import curdoc
 from bokeh.models import WMTSTileSource
 
-from holoviews.operation.datashader import datashade
+from holoviews.operation.datashader import datashade, aggregate, shade
 
 hv.extension('bokeh')
 renderer = hv.renderer('bokeh').instance(mode='server')
@@ -54,6 +54,6 @@ button.on_click(animate)
 layout = layout([
     [plot.state],
     [slider, button],
-], sizing_mode='scale_width')
+], sizing_mode='fixed')
 
 curdoc().add_root(layout)
