@@ -8,6 +8,8 @@ from bokeh.io import curdoc
 from bokeh.models import WMTSTileSource
 
 from holoviews.operation.datashader import datashade, aggregate, shade
+from holoviews.plotting.util import fire
+shade.cmap = fire
 
 hv.extension('bokeh')
 renderer = hv.renderer('bokeh').instance(mode='server')

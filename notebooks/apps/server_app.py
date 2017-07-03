@@ -2,6 +2,9 @@ import dask.dataframe as dd
 from holoviews.operation.datashader import datashade
 import holoviews as hv
 
+from holoviews.plotting.util import fire
+datashade.cmap = fire
+
 renderer = hv.renderer('bokeh')
 
 # Load data
