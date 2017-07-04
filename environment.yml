@@ -12,3 +12,5 @@ dependencies:
   - pandas
   - xarray
   - datashader
+  - selenium
+  - phantomjs
