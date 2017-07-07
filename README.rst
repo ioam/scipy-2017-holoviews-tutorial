@@ -93,7 +93,7 @@ Preparing for the Tutorial
 
 If you want to get familiar with HoloViews before the tutorial (which
 is not a requirement), you can have a look at our new website at
-`holoviews <http://holoviews.org/>`_ looking through the getting
+`holoviews.org <http://holoviews.org/>`_ looking through the getting
 started and user guides. If you want to run these examples yourself,
 you can get ahold of them by typing this command inside your conda
 environment::
