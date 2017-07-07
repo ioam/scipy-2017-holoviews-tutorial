@@ -37,7 +37,7 @@ When installation is complete you may activate the environment by writing::
 
    > activate hvtutorial
 
-(for Winows) or::
+(for Windows) or::
 
    $ source activate hvtutorial
 
