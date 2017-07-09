@@ -1,3 +1,6 @@
+
+|Gitter|_
+
 scipy-2017-holoviews-tutorial
 =============================
 
@@ -106,3 +109,7 @@ your current directory.  Now launch a Jupyter notebook server and dive
 into the examples::
 
     (hvtutorial)> jupyter notebook --NotebookApp.iopub_data_rate_limit=100000000 notebooks/00-welcome.ipynb
+
+
+.. |Gitter| image:: https://badges.gitter.im/Join%20Chat.svg
+.. _Gitter: https://gitter.im/scipy-2017-holoviews-tutorial/Lobby
