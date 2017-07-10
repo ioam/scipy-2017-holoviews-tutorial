@@ -20,8 +20,33 @@ ddf = dd.read_csv('../data/nyc_taxi.csv', parse_dates=['tpep_pickup_datetime'], 
 ddf['hour'] = ddf.tpep_pickup_datetime.dt.hour
 ddf = ddf.persist()
 
-### Define the HoloViews objects here ####
+from bokeh.models import WMTSTileSource
+url = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{Z}/{Y}/{X}.jpg'
+wmts = gv.WMTS(WMTSTileSource(url=url))
 
+stream = hv.streams.Stream.define('HourSelect', hour=0)()
+points = hv.Points(ddf, kdims=['dropoff_x', 'dropoff_y'])
+dmap = hv.util.Dynamic(points, operation=lambda obj, hour: obj.select(hour=hour),
+                       streams=[stream])
+
+# Apply aggregation
+aggregated = aggregate(dmap, link_inputs=True)
+
+# Shade the data
+shaded = shade(aggregated)
+
+# Define PointerX stream, attach to points and declare DynamicMap for cross-section and VLine
+pointer = hv.streams.PointerX(x=ddf.dropoff_x.loc[0].compute().iloc[0], source=points)
+section = hv.util.Dynamic(aggregated, operation=lambda obj, x: obj.sample(dropoff_x=x),
+                          streams=[pointer], link_inputs=False)
+vline = hv.DynamicMap(lambda x: hv.VLine(x), streams=[pointer])
+
+# Define options
+hv.opts("RGB [width=800 height=600 xaxis=None yaxis=None] VLine (color='black' line_width=1)")
+hv.opts("Curve [width=100 yaxis=None show_frame=False] (color='black') {+framewise} Layout [shared_axes=False]")
+
+# Combine it all into a complex layout
+hvobj = (wmts * shaded * vline) << section
 
 ### Pass the HoloViews object to the renderer
 plot = renderer.get_plot(hvobj, doc=curdoc())
