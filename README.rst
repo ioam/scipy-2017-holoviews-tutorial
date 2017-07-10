@@ -2,7 +2,7 @@
 scipy-2017-holoviews-tutorial
 =============================
 
-HoloViews tutorial at SciPy 2017
+HoloViews with Bokeh tutorial at SciPy 2017
 
 This document explains how to get your computer set up for the
 tutorial, including how to install the software libraries and data
