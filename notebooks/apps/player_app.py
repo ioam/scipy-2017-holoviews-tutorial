@@ -42,7 +42,7 @@ section = hv.util.Dynamic(aggregated, operation=lambda obj, x: obj.sample(dropof
 vline = hv.DynamicMap(lambda x: hv.VLine(x), streams=[pointer])
 
 # Define options
-hv.opts("RGB [width=800 height=400 xaxis=None yaxis=None] VLine (color='black' line_width=1)")
+hv.opts("RGB [width=800 height=600 xaxis=None yaxis=None] VLine (color='black' line_width=1)")
 hv.opts("Curve [width=100 yaxis=None show_frame=False] (color='black') {+framewise} Layout [shared_axes=False]")
 
 # Combine it all into a complex layout
