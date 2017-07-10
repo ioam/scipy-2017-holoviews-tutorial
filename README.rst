@@ -44,7 +44,7 @@ When installation is complete you may activate the environment by writing::
 
 (for Linux and Mac). 
 
-Later, when you are ready exit the environment after the tutorial, you can type::
+Later, when you are ready to exit the environment after the tutorial, you can type::
 
    > deactivate
 
