@@ -3,6 +3,10 @@ The notebooks in this directory are those presented during the tutorial,
 including exercise solutions. The following snapshots of these notebooks
 are available online via [nbviewer](https://nbviewer.jupyter.org).
 
+Note that some of the output in notebooks 3,4,5,6 and 7 requires a live
+server to support the interactivity offered by HoloViews widgets and
+Bokeh tools.
+
 
 [00-welcome](https://nbviewer.jupyter.org/gist/jlstevens/adb550e7a43fbafafeef7bd4d263e026): Get started by creating a variety of different HoloViews "elements". <br>
 [01-introduction-to-elements](https://nbviewer.jupyter.org/gist/jlstevens/93fec6e5c35262fbbb6ecb16b7b4d6ed): How to change the appearance and output format of elements.<br>
